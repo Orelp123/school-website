@@ -14,7 +14,7 @@
      <div class="logo">
          <% =msg %> 
      <img src="../images/NewLogoColor.png" id="logo" />
-
+    <p>Nigga</p>
          
 
 
