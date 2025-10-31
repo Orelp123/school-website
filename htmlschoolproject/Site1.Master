@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="htmlschoolproject.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="appPages/css/masterCss.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- ADD THIS: the server form must wrap your content -->
+    <form id="form1" runat="server">
+
+        <div class="bar">
+            <div class="search">
+                <span class="search-icon material-symbols-outlined">search</span>
+                <input class="search-input" type="search" placeholder="Search...">
+            </div>
+            <a href="appPages/aspxPages/WelcomePage.aspx"><i class="fa fa-fw fa-home" id="homeBar"></i> Home</a>
+            <a><i class="fa fa-fw fa-envelope" id="contactBar"></i> Contact</a>
+            <a href="appPages/aspxPages/Login.aspx"><i class="fa fa-fw fa-user" id="loginBar"></i> Login/Register</a>
+        </div>
+
+        <!-- Your page content gets injected here and will now post back -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+
+    </form>
+</body>
+</html>
