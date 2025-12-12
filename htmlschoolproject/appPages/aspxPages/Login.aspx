@@ -14,7 +14,7 @@
      <div class="logo">
          <% =msg %> 
      <img src="../images/NewLogoColor.png" id="logo" />
-    
+
          
 
 
@@ -38,9 +38,9 @@
      <input id="loginBtn" type="submit" value="Login" />
 
      <p id="myP">dont have an acount yet? </p>
-     <p id="acountAsk"><a href="signUpPage.html"> click here to sign up</a></p>
+     <p id="acountAsk"><a href="Registar.aspx"> click here to sign up</a></p>
 
-     <p>Hello</p>
+     
 
 
 

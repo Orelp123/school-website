@@ -10,20 +10,54 @@
 </head>
 <body>
 
-    <!-- ADD THIS: the server form must wrap your content -->
+    
     <form id="form1" runat="server">
 
         <div class="bar">
-            <div class="search">
+<%--            <div class="search">
                 <span class="search-icon material-symbols-outlined">search</span>
                 <input class="search-input" type="search" placeholder="Search...">
-            </div>
-            <a href="appPages/aspxPages/WelcomePage.aspx"><i class="fa fa-fw fa-home" id="homeBar"></i> Home</a>
-            <a><i class="fa fa-fw fa-envelope" id="contactBar"></i> Contact</a>
-            <a href="appPages/aspxPages/Login.aspx"><i class="fa fa-fw fa-user" id="loginBar"></i> Login/Register</a>
-        </div>
+            </div>--%>
 
-        <!-- Your page content gets injected here and will now post back -->
+            <a href="WelcomePage.aspx"><i class="fa fa-fw fa-home" id="homeBar"></i> Home</a>
+            <a><i class="fa fa-fw fa-envelope" id="contactBar"></i> Contact</a>
+            <a href="Login.aspx"><i class="fa fa-fw fa-user" id="loginBar"></i> Login/Register</a>
+
+            <asp:PlaceHolder ID="adminOnly" runat="server" Visible="false">
+                <a href="UserList.aspx">
+                    <i class="fa fa-fw fa-user"></i> UserList
+                </a>
+
+                <a href="DeleteUser.aspx">
+                    <i class="fa fa-fw fa-user"></i> Delete User
+                </a>
+            </asp:PlaceHolder>
+            <asp:PlaceHolder ID="logedUserOnly" runat="server" Visible="false">
+
+                <a href="UpdateUser.aspx">
+                    <i class="fa fa-fw fa-user"></i> Update User
+                </a>
+                <a href="RecoverPassword.aspx">
+                     <i class="fa fa-fw fa-user"></i> Recover Password
+                </a>
+                        
+                        <asp:LinkButton 
+                            ID="btnLogout" 
+                            runat="server" 
+                            OnClick="btnLogout_Click" 
+                            CssClass="logout-btn">
+                            Logout
+                        </asp:LinkButton>
+              
+            </asp:PlaceHolder>
+
+           
+           
+        </div>
+        
+
+        
+   
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
 
     </form>

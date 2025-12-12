@@ -23,6 +23,7 @@ namespace htmlschoolproject
                 {
                     message = "Register success";
                     //  Response.Redirect("Admin.aspx");
+                    Response.Redirect("WelcomePage.aspx");
                 }
                 else
 
@@ -36,13 +37,13 @@ namespace htmlschoolproject
         {
             int success = -1;//מקומי
             string mail = Request.Form["emailId"].ToString();//לדייק מול הטופס
-
+            string isAdmin = "0";
             string fname = Request.Form["firstNameId"];//לדייק מול הטופס
             string password = Request.Form["passwordId"].ToString();
            // int byear = int.Parse(Request.Form["byear"].ToString());//לא רלוונטי
             if (mail != null && password != null)
             {
-                string sql = "INSERT INTO RegisterTable (Name,Mail,Password) VALUES('" + fname + "','" + mail + "','" + password + "')";//לדייק מול טבלת הנתונים 
+                string sql = "INSERT INTO RegisterTable (Name,Mail,Password,IsAdmin) VALUES('" + fname + "','" + mail + "','" + password + "','" + isAdmin + "' )";//לדייק מול טבלת הנתונים 
                 Helper.DoQuery(fileName, sql);
                 success = 1;
             }

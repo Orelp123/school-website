@@ -67,13 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="appPages\aspxPages\DeleteUser.aspx" />
     <Content Include="appPages\aspxPages\Login.aspx" />
     <Content Include="appPages\aspxPages\loginPage.js" />
-    <Content Include="appPages\aspxPages\Profile.aspx" />
+    <Content Include="appPages\aspxPages\RecoverPassword.aspx" />
+    <Content Include="appPages\aspxPages\UpdateUser.aspx" />
     <Content Include="appPages\aspxPages\UserList.aspx" />
     <Content Include="appPages\aspxPages\WelcomePage.aspx" />
     <Content Include="appPages\css\masterCss.css" />
     <Content Include="appPages\css\Register.css" />
+    <Content Include="appPages\css\UpdateUser.css" />
     <Content Include="appPages\css\UserList.css" />
     <Content Include="appPages\css\welcomePage.css" />
     <Content Include="appPages\images\breadImg.jpg" />
@@ -91,9 +94,17 @@
     <Content Include="appPages\JScode\loginPage.js" />
     <Content Include="appPages\JScode\welcomePage.js" />
     <Content Include="appPages\aspxPages\Registar.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="appPages\aspxPages\DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appPages\aspxPages\DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="appPages\aspxPages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,12 +112,19 @@
     <Compile Include="appPages\aspxPages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="appPages\aspxPages\Profile.aspx.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
+    <Compile Include="appPages\aspxPages\RecoverPassword.aspx.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="appPages\aspxPages\Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
+    <Compile Include="appPages\aspxPages\RecoverPassword.aspx.designer.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appPages\aspxPages\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appPages\aspxPages\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="appPages\aspxPages\UserList.aspx.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
@@ -121,6 +139,9 @@
     </Compile>
     <Compile Include="appPages\aspxPages\WelcomePage.aspx.designer.cs">
       <DependentUpon>WelcomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\general.cs" />
     <Compile Include="Helper.cs" />

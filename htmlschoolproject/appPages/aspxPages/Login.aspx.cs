@@ -35,15 +35,19 @@ namespace htmlschoolproject.appPages.aspxPages
                         }
                         else
                         {
-                            Session["userName"] = table.Rows[0]["Name"].ToString();
-                            Session["Admin"] = table.Rows[0]["IsAdmin"].ToString();
+                            Session["Name"] = table.Rows[0]["Name"].ToString();
+                            Session["admin"] = table.Rows[0]["IsAdmin"].ToString();
                             if (Session["admin"].ToString()=="1") 
                             {
-                                msg = "welcome admin" + Session["mail"].ToString();
+                                msg = "welcome admin " + Session["Name"].ToString();
+                                Session["userName"] = Session["Name"].ToString();
+                                Response.Redirect("WelcomePage.aspx");
+                                
                             }
                             else
                             {
-                                msg = "welcome " + Session["userName"].ToString();
+                                msg = "welcome " + Session["Name"].ToString();
+                                Response.Redirect("WelcomePage.aspx");
                             }
 
                         }

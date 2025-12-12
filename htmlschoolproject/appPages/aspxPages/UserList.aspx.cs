@@ -47,6 +47,7 @@ namespace htmlschoolproject.appPages.aspxPages
             msg += "<td> firstname</td>";
             msg += "<td> mail</td>";
             msg += "<td> password </td>";
+            msg += "<td> admin</td>";
             msg += "</tr>";
             for (int i = 0; i < length; i++)
             {
@@ -54,6 +55,7 @@ namespace htmlschoolproject.appPages.aspxPages
                 msg += "<td>" + table.Rows[i]["Name"].ToString() + "</td>";
                 msg += "<td>" + table.Rows[i]["Mail"].ToString() + "</td>";
                 msg += "<td>" + table.Rows[i]["Password"].ToString() + "</td>";
+                msg += "<td>" + table.Rows[i]["IsAdmin"].ToString() + "</td>";
                 //  msg += "<td> <a href = 'DelMngr.aspx?pass=" + table.Rows[i]("password"] + "'>del
                 msg += "</tr>";
             }

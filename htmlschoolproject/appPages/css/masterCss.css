@@ -47,24 +47,66 @@
 
 
 
-.bar {
-    width: 100%;
-    background-color: none;
+.bar a {
+    float: left;
+    padding: 12px;
+    color: #543A14;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-    .bar a {
-        float: left;
-        padding: 12px;
-        color: #543A14;
-        text-decoration: none;
-        font-size: 17px;
+    .bar a:hover {
+        background-color: #FFF0DC;
+        cursor: pointer;
+        border-radius: 8px;
     }
 
-        .bar a:hover {
-            background-color: #FFF0DC;
-            cursor: pointer;
-            border-radius: 8px;
-        }
+
+
+.btnLogout {
+    background-color: red;
+    width: 5em;
+    height: 2em;
+    left: 50%;
+    top: 77%;
+    text-align: center;
+    font-size: 30px;
+    background-color: #DEAA79;
+    outline: none;
+    border: none;
+    font-family: Cursive;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.logout-link {
+    float: left;
+    padding: 12px;
+    color: #543A14;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+    .logout-link:hover {
+        background-color: #FFF0DC;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+    .logout-btn:focus {
+        outline: none;
+    }
+
 
 
 
@@ -78,3 +120,4 @@
         float: none;
         display: block;
     }
+}
