@@ -16,8 +16,8 @@ namespace htmlschoolproject.appPages.aspxPages
             string fileName = general.FileName;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["admin"].ToString() == "1")
-            //{
+            if (Session["admin"].ToString() == "1")
+            {
 
 
                 if (this.IsPostBack)//הסבר נוסף יבוא
@@ -34,7 +34,7 @@ namespace htmlschoolproject.appPages.aspxPages
                         message = "Delete failed";
                     }
                 }
-            //}
+            }
         }
 
         private int DelUser()

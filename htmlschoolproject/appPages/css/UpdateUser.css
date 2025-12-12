@@ -39,7 +39,7 @@
     margin-left: 60px;
 }
 
-#passwordId {
+#oldPasswordId {
     transform: translate(-50%,-50%);
     position: absolute;
     width: 12em;
@@ -54,8 +54,23 @@
     text-align: center;
     margin-left: 60px;
 }
+#newPasswordId {
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 12em;
+    height: 1.4em;
+    left: 54%;
+    top: 40%;
+    font-size: 30px;
+    border-radius: 9px;
+    background-color: #DEAA79;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin-left: 60px;
+}
 
-#passH2 {
+#oldpassH2 {
     transform: translate(-50%,-50%);
     position: absolute;
     left: 76.3%;
@@ -63,7 +78,19 @@
     font-family: Cursive;
     letter-spacing: 2px;
     color: #543A14;
-    font-size: 2rem;
+    font-size: 1.9rem;
+    padding-bottom: 15px;
+    color: #543A14;
+}
+#newpassH2 {
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 60%;
+    top: 25%;
+    font-family: Cursive;
+    letter-spacing: 2px;
+    color: #543A14;
+    font-size: 1.9rem;
     padding-bottom: 15px;
     color: #543A14;
 }
@@ -89,6 +116,22 @@
     height: 2em;
     left: 50%;
     top: 77%;
+    text-align: center;
+    font-size: 30px;
+    background-color: #DEAA79;
+    outline: none;
+    border: none;
+    font-family: Cursive;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#changeBtn {
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 5em;
+    height: 2em;
+    left: 58%;
+    top: 66%;
     text-align: center;
     font-size: 30px;
     background-color: #DEAA79;
@@ -127,14 +170,25 @@
     color: #49434340;
 }
 
-#passwordId::placeholder {
+#oldPasswordId::placeholder {
     font-size: 30px;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #49434340;
 }
 
-#passwordId:focus {
+#oldPasswordId:focus {
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
+}
+#newPasswordId::placeholder {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #49434340;
+}
+
+#newPasswordId:focus {
     transition: 0.5s;
     box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
 }

@@ -18,8 +18,8 @@
         <input type="text" id="emailId" name="emailId" placeholder="Enter Email" />
     </div>
 
-    <h2 id="passH2">Old Password</h2>
-    <input type="password" id="passwordId" name="passwordId" placeholder="Enter Password" />
+    <h2 id="oldpassH2">Old Password</h2>
+    <input type="password" id="oldPasswordId" name="oldpasswordId" placeholder="Enter Password" />
 
     <input id="loginBtn" type="submit" value="Login" />
 

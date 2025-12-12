@@ -26,7 +26,7 @@ public class Helper
 
         //  Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = "C:\Users\user\Desktop\comuter peojects\WebApplication3\App_Data\DvirDb.mdf"; Integrated Security = True; Connect Timeout = 30
 
-        string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Owner\Documents\OrelDB.mdf;Integrated Security=True;Connect Timeout=30";
+        string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\CODE\SCHOOL-WEBSITE\ORELDB.MDF;Integrated Security=True;Connect Timeout=30";
 
 
         SqlConnection conn = new SqlConnection(connString);
@@ -71,5 +71,18 @@ public class Helper
 
         conn.Close();
         return dt;
+    }
+    public static int ExecuteNonQuery(string fileName, string sql)
+    {
+        using (SqlConnection conn = ConnectToDb(fileName))
+        {
+            conn.Open();
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected;
+            }
+        }
     }
 }

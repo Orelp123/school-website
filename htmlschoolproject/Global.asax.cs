@@ -1,4 +1,5 @@
-﻿using System;
+﻿using htmlschoolproject.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace htmlschoolproject
 {
     public class Global : System.Web.HttpApplication
     {
+        
 
         protected void Application_Start(object sender, EventArgs e)
         {

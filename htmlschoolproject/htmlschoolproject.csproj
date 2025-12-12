@@ -71,13 +71,14 @@
     <Content Include="appPages\aspxPages\Login.aspx" />
     <Content Include="appPages\aspxPages\loginPage.js" />
     <Content Include="appPages\aspxPages\RecoverPassword.aspx" />
+    <Content Include="appPages\aspxPages\UpdateUserChange.aspx" />
     <Content Include="appPages\aspxPages\UpdateUser.aspx" />
     <Content Include="appPages\aspxPages\UserList.aspx" />
     <Content Include="appPages\aspxPages\WelcomePage.aspx" />
     <Content Include="appPages\css\masterCss.css" />
     <Content Include="appPages\css\Register.css" />
     <Content Include="appPages\css\UpdateUser.css" />
-    <Content Include="appPages\css\UserList.css" />
+    <Content Include="appPages\css\UserListCss.css" />
     <Content Include="appPages\css\welcomePage.css" />
     <Content Include="appPages\images\breadImg.jpg" />
     <Content Include="appPages\images\BreadManLogoSingle.png" />
@@ -118,6 +119,13 @@
     </Compile>
     <Compile Include="appPages\aspxPages\RecoverPassword.aspx.designer.cs">
       <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appPages\aspxPages\UpdateUserChange.aspx.cs">
+      <DependentUpon>UpdateUserChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appPages\aspxPages\UpdateUserChange.aspx.designer.cs">
+      <DependentUpon>UpdateUserChange.aspx</DependentUpon>
     </Compile>
     <Compile Include="appPages\aspxPages\UpdateUser.aspx.cs">
       <DependentUpon>UpdateUser.aspx</DependentUpon>

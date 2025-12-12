@@ -11,6 +11,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <center>
     <div class="logo">
+        <script src="loginPage.js"></script>
 
         
 

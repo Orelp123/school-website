@@ -1,66 +1,107 @@
 ﻿using htmlschoolproject.Helpers;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace htmlschoolproject.appPages.aspxPages
 {
     public partial class UserList : System.Web.UI.Page
     {
-
-        public string msg = " ";//טבלת הנתונים
-        public string msg1 = " ";//הודעת שגיאה
-        public string sqlSelect;//פקודה לביצוע      
+        public string msg = " ";
+        public string msg1 = " ";
+        public string sqlSelect;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // if (Session["admin"].ToString() == "1")
-            //{
-            string fileName = general.FileName;//שם מסד נתונים
-            string tableName = "RegisterTable";//שם טבלה
+            
+            if (Session["admin"] == null || Session["admin"].ToString() != "1")
+            {
+                Response.Redirect("Login.aspx");
+                return;
+            }
+
+            
+            if (!string.IsNullOrEmpty(Request.Form["deleteMail"]))
+            {
+                DelUser();
+            }
+
+            
+            string fileName = general.FileName;
+            string tableName = "RegisterTable";
+
             sqlSelect = "SELECT * FROM " + tableName;
             DataTable table = Helper.ExecuteDataTable(fileName, sqlSelect);
-            int length = table.Rows.Count;
-            if (length == 0) msg1 = "אין נרשמים";
+
+            if (table.Rows.Count == 0)
+            {
+                msg1 = "No Users";
+                msg = "";
+            }
             else
             {
-                GetAllUsers(table, length);
-                msg1 = " אנשים נרשמו " + length;
+                GetAllUsers(table, table.Rows.Count);
+                msg1 = table.Rows.Count + " Users registered";
             }
-            //}
-            //else
-            //{
-            //    msg1 = " sorry, you are not admin! ";
-            //}
-
-
         }
+
+
         private void GetAllUsers(DataTable table, int length)
         {
+            msg = "<table class='users-table'>";
+            msg += "<thead><tr>";
+            msg += "<th>First name</th>";
+            msg += "<th>Email</th>";
+            msg += "<th>Password</th>";
+            msg += "<th>Role</th>";
+            msg += "<th>Delete</th>";
+            msg += "</tr></thead>";
+            msg += "<tbody>";
 
-
-            msg = "<table border = '2' class='tables'> <tr>";
-            msg += "<td> firstname</td>";
-            msg += "<td> mail</td>";
-            msg += "<td> password </td>";
-            msg += "<td> admin</td>";
-            msg += "</tr>";
             for (int i = 0; i < length; i++)
             {
+                string name = table.Rows[i]["Name"].ToString();
+                string mail = table.Rows[i]["Mail"].ToString();
+                string pass = table.Rows[i]["Password"].ToString();
+                string isAdmin = table.Rows[i]["IsAdmin"].ToString();
+
                 msg += "<tr>";
-                msg += "<td>" + table.Rows[i]["Name"].ToString() + "</td>";
-                msg += "<td>" + table.Rows[i]["Mail"].ToString() + "</td>";
-                msg += "<td>" + table.Rows[i]["Password"].ToString() + "</td>";
-                msg += "<td>" + table.Rows[i]["IsAdmin"].ToString() + "</td>";
-                //  msg += "<td> <a href = 'DelMngr.aspx?pass=" + table.Rows[i]("password"] + "'>del
+                msg += "<td>" + name + "</td>";
+                msg += "<td class='mono'>" + mail + "</td>";
+                msg += "<td class='password-cell'>" + pass + "</td>";
+                msg += "<td>" + (isAdmin == "1"
+                    ? "<span class='badge badge-admin'>Admin</span>"
+                    : "<span class='badge badge-user'>User</span>") + "</td>";
+
+               
+                msg += "<td>";
+                msg += "<form method='post' style='margin:0'>";
+                msg += "<input type='hidden' name='deleteMail' value='" + mail + "' />";
+                msg += "<input type='submit' value='Delete' class='delete-btn' " +
+                       "onclick=\"return confirm('Are you sure you want to delete this user?');\" />";
+                msg += "</form>";
+                msg += "</td>";
+
                 msg += "</tr>";
             }
-            msg += "</table>";
 
+            msg += "</tbody></table>";
         }
+        private int DelUser()
+        {
+            int success = -1;
+
+            string mail = Request.Form["deleteMail"];
+
+            if (!string.IsNullOrEmpty(mail))
+            {
+                string sql = "DELETE FROM RegisterTable WHERE Mail = '" + mail + "'";
+                Helper.ExecuteNonQuery(general.FileName, sql);
+                success = 1;
+            }
+
+            return success;
+        }
+
     }
 }

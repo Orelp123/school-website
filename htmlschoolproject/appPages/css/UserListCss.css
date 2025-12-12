@@ -1,0 +1,84 @@
+﻿.mainDiv {
+    max-width: 1100px;
+    margin: 0px auto;
+    padding: 30px;
+    background-color: transparent;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 16px;
+}
+
+.users-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #000;
+}
+
+.users-subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.table-card {
+    background-color: #FFF0DC;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    text-align: left;
+}
+
+    .users-table th {
+        padding: 12px;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .users-table td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .users-table tbody tr:hover {
+        background-color: #f3f3f3;
+    }
+
+.password-cell {
+    font-family: Consolas, monospace;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .mainDiv {
+        margin: 80px 10px 30px 10px; 
+        padding: 20px;
+    }
+
+    .users-title {
+        font-size: 26px;
+    }
+}
+.delete-btn {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+    .delete-btn:hover {
+        background-color: #a93226;
+    }
+

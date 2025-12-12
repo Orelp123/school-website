@@ -35,6 +35,7 @@ namespace htmlschoolproject.appPages.aspxPages
                         }
                         else
                         {
+                            Session["Mail"] = table.Rows[0]["Mail"].ToString();
                             Session["Name"] = table.Rows[0]["Name"].ToString();
                             Session["admin"] = table.Rows[0]["IsAdmin"].ToString();
                             if (Session["admin"].ToString()=="1") 
@@ -47,6 +48,7 @@ namespace htmlschoolproject.appPages.aspxPages
                             else
                             {
                                 msg = "welcome " + Session["Name"].ToString();
+                                Session["userName"] = Session["Name"].ToString();
                                 Response.Redirect("WelcomePage.aspx");
                             }
 
