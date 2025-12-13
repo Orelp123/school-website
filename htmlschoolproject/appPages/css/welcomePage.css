@@ -1,102 +1,195 @@
-﻿
-
-
-
-h2 {
-    margin-top: 3em;
-    
+﻿html, body {
+    margin: 0;
+    padding: 0;
 }
 
-
-
-.gallery {
-    display: inline-block;
-    margin: 10px;
-    border-radius: 14px;
-    transition: 0.5s;
-    width: 200px;
-    background-color: #FFF0DC;
+body {
+    background-color: #E9C887;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
-
-
-.gallery:hover {
-    box-shadow: 0 0 10px #543A14;
-    transform: scale(1.2);
-    cursor:pointer
-}
-    .gallery .discriptin {
-        padding: 10px;
-        text-align: center;
-        font-family: Cursive;
-    }
-
-.gallery img {
+/* ===== PAGE WRAPPER ===== */
+.welcomePage {
     width: 100%;
-    height: 100%;
+}
 
+/* ===== TOP LOGO ===== */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 #logo {
-    transform: translate(-50%, -50%);
-    margin-top: 150px;
-    padding: 0;
-    margin-bottom: -170px;
+    width: 240px; /* BIGGER */
+    height: auto;
 }
+
+/* ===== TOP SECTION ===== */
+.pageWrap {
+    max-width: 1280px;
+    width: 94%;
+    margin: 8px auto 0 auto;
+    display: grid;
+    grid-template-columns: 240px 1fr 240px; /* BIGGER side area */
+    gap: 12px;
+    align-items: start;
+}
+
+.sideGrid {
+    display: flex;
+    justify-content: center;
+}
+
+.sideImg {
+    width: 100%;
+    max-width: 240px; /* BIGGER side images */
+    height: auto;
+    border-radius: 18px;
+    display: block;
+}
+
+/* ===== CENTER TEXT ===== */
+.centerContent {
+    text-align: center;
+}
+
 #myH2 {
-    margin-top: 0;
+    margin: 8px 0 6px 0;
     font-family: Fantasy;
     letter-spacing: 2px;
     color: #543A14;
-    font-size: 40px;
+    font-size: 38px; /* BIGGER */
 }
+
+#myH3 {
+    margin: 0 0 10px 0;
+    font-family: Fantasy;
+    letter-spacing: 2px;
+    color: #131010;
+    font-size: 24px; /* BIGGER */
+    text-decoration: underline;
+}
+
 #myP {
     color: #543A14;
-    font-size: 20px;
-    font-weight: 400;
     font-family: Perpetua;
-    width: 500px;
-    margin-bottom: 100px;
-}
-#myH3 {
-    margin-top: 0;
-    font-family: Fantasy;
-    letter-spacing: 2px;
-    color: #131010;
-    font-size: 24px;
-    text-decoration:underline;
+    font-size: 17px; /* BIGGER */
+    line-height: 1.35;
+    max-width: 650px; /* BIGGER */
+    margin: 0 auto;
+    max-height: 300px; /* slightly taller */
+    overflow: hidden;
 }
 
-#sideLGrid {
-    position: absolute;
-    top: 300px;
-    left: 25px;
-    
-}
-#sideRGrid {
-    position: absolute;
-    top: 300px;
-    right: 25px;
-    
-}
+/* ===== TITLE ABOVE GALLERY ===== */
 #H3Num2 {
-    margin-top: 0;
+    margin: 22px 0 14px 0;
+    text-align: center;
     letter-spacing: 2px;
     color: #131010;
-    font-size: 24px;
-    margin-bottom: 70px;
+    font-size: 22px; /* BIGGER */
 }
 
+/* ===== GALLERY GRID ===== */
+.galleryGrid {
+    max-width: 1050px; /* BIGGER */
+    width: 94%;
+    margin: 0 auto 34px auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+}
 
+/* Cards */
+.gallery {
+    background-color: #FFF0DC;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.2s;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
 
-   
+    .gallery:hover {
+        box-shadow: 0 0 10px #543A14;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
 
+    .gallery img {
+        width: 100%;
+        height: 135px; /* BIGGER images */
+        object-fit: cover;
+        display: block;
+    }
 
+    .gallery .discriptin {
+        padding: 7px 6px;
+        text-align: center;
+        font-family: Cursive;
+        color: #543A14;
+        font-size: 13px;
+        line-height: 1.1;
+    }
 
-    
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+    .pageWrap {
+        grid-template-columns: 200px 1fr 200px;
+        gap: 12px;
+    }
 
+    .sideImg {
+        max-width: 200px;
+    }
 
-   
+    #myP {
+        max-height: none;
+        overflow: visible;
+    }
 
+    .galleryGrid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+    }
 
+    .gallery img {
+        height: 170px;
+    }
+}
 
+@media (max-width: 850px) {
+    .pageWrap {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .centerContent {
+        order: 1;
+    }
+
+    .sideGrid {
+        order: 2;
+    }
+
+    #myH2 {
+        font-size: 30px;
+    }
+
+    #myP {
+        max-height: none;
+        overflow: visible;
+        font-size: 16px;
+    }
+
+    .galleryGrid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 650px;
+    }
+
+    .gallery img {
+        height: 180px;
+    }
+}
