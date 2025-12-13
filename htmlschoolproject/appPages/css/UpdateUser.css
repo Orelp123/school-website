@@ -1,204 +1,152 @@
-﻿
+﻿html, body {
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    background-color: #E9C887;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===== TOP LOGO ===== */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
 
 #logo {
-    transform: translate(-50%, -50%);
-    margin-top: 150px;
-    position: absolute;
-    left: 50%;
-    padding: 0;
-    margin-bottom: -170px;
-    width: 20vw;
-    height: 30vh;
+    width: 230px;
+    height: auto;
 }
 
+/* ===== PAGE WRAPPER (NO SCROLL) ===== */
+.pageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* ===== MAIN CARD ===== */
 .mainDiv {
-    transform: translate(-50%, -50%);
+    width: 820px;
+    max-width: 92vw;
+    height: 460px;
     background-color: #FFF0DC;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 56vw;
-    height: 60vh;
-    border-radius: 8px;
+    border-radius: 18px;
+    padding: 26px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
-#emailId {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 12em;
-    height: 1.4em;
-    left: 70%;
-    top: 33%;
-    font-size: 30px;
-    border-radius: 9px;
-    background-color: #DEAA79;
-    border: none;
-    outline: none;
-    text-align: center;
-    margin-left: 60px;
-}
-
-#oldPasswordId {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 12em;
-    height: 1.4em;
-    left: 70%;
-    top: 60%;
-    font-size: 30px;
-    border-radius: 9px;
-    background-color: #DEAA79;
-    border: none;
-    outline: none;
-    text-align: center;
-    margin-left: 60px;
-}
-#newPasswordId {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 12em;
-    height: 1.4em;
-    left: 54%;
-    top: 40%;
-    font-size: 30px;
-    border-radius: 9px;
-    background-color: #DEAA79;
-    border: none;
-    outline: none;
-    text-align: center;
-    margin-left: 60px;
-}
-
-#oldpassH2 {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 76.3%;
-    top: 44%;
-    font-family: Cursive;
-    letter-spacing: 2px;
-    color: #543A14;
-    font-size: 1.9rem;
-    padding-bottom: 15px;
-    color: #543A14;
-}
-#newpassH2 {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 60%;
-    top: 25%;
-    font-family: Cursive;
-    letter-spacing: 2px;
-    color: #543A14;
-    font-size: 1.9rem;
-    padding-bottom: 15px;
-    color: #543A14;
-}
-
-#emailH2 {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 76.3%;
-    top: 17%;
-    font-family: Cursive;
-    letter-spacing: 2px;
-    color: #543A14;
-    font-size: 2rem;
-    padding-bottom: 15px;
-    color: #543A14;
-}
-
-
-#loginBtn {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 5em;
-    height: 2em;
-    left: 50%;
-    top: 77%;
-    text-align: center;
-    font-size: 30px;
-    background-color: #DEAA79;
-    outline: none;
-    border: none;
-    font-family: Cursive;
-    border-radius: 10px;
-    cursor: pointer;
-}
-#changeBtn {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 5em;
-    height: 2em;
-    left: 58%;
-    top: 66%;
-    text-align: center;
-    font-size: 30px;
-    background-color: #DEAA79;
-    outline: none;
-    border: none;
-    font-family: Cursive;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-
-#myP {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 50%;
-    top: 83%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #543A14;
-}
-
-
-
+/* ===== LEFT IMAGE ===== */
 #soloLogo {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 23%;
-    top: 50%;
-    width: 30vw;
-    height: 55vh;
+    height: 330px;
+    width: auto;
+    justify-self: center;
 }
 
-#emailId::placeholder {
-    font-size: 30px;
+/* ===== FORM ===== */
+.formArea {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+    .field h2 {
+        margin: 0;
+        font-family: Cursive;
+        letter-spacing: 2px;
+        color: #543A14;
+        font-size: 1.25rem;
+    }
+
+/* ===== INPUTS ===== */
+#emailId,
+#oldPasswordId,
+#newPasswordId {
+    width: 320px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: #DEAA79;
+    border: none;
+    outline: none;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #49434340;
+    font-size: 1rem;
 }
 
-#oldPasswordId::placeholder {
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #49434340;
+    #emailId::placeholder,
+    #oldPasswordId::placeholder,
+    #newPasswordId::placeholder {
+        color: #49434340;
+    }
+
+    #emailId:focus,
+    #oldPasswordId:focus,
+    #newPasswordId:focus {
+        box-shadow: 0 0 8px rgba(0,0,0,0.25);
+    }
+
+/* ===== BUTTON ===== */
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
 }
 
-#oldPasswordId:focus {
-    transition: 0.5s;
-    box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
-}
-#newPasswordId::placeholder {
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #49434340;
-}
-
-#newPasswordId:focus {
-    transition: 0.5s;
-    box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
+#changeBtn {
+    width: 150px;
+    height: 46px;
+    font-size: 1.5rem;
+    background-color: #DEAA79;
+    border: none;
+    border-radius: 12px;
+    font-family: Cursive;
+    cursor: pointer;
 }
 
-#emailId:focus {
-    transition: 0.5s;
-    box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
-}
+    #changeBtn:hover {
+        box-shadow: 0 0 8px rgba(0,0,0,0.25);
+    }
 
-#loginBtn:hover {
-    transition: 0.5s;
-    box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .pageWrapper {
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .mainDiv {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 22px;
+    }
+
+    #soloLogo {
+        height: 260px;
+    }
+
+    #emailId,
+    #oldPasswordId,
+    #newPasswordId {
+        width: 90%;
+    }
+
+    #changeBtn {
+        width: 90%;
+    }
 }

@@ -34,7 +34,7 @@
             </asp:PlaceHolder>
             <asp:PlaceHolder ID="logedUserOnly" runat="server" Visible="false">
 
-                <a href="UpdateUser.aspx">
+                <a href="UpdateUserChange.aspx">
                     <i class="fa fa-fw fa-user"></i> Update User
                 </a>
                 <a href="RecoverPassword.aspx">

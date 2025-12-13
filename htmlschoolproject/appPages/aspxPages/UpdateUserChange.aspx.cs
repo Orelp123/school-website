@@ -15,17 +15,31 @@ namespace htmlschoolproject.appPages.aspxPages
         {
             string fileName = general.FileName;
             string newPassword = Request.Form["newPasswordId"];
-            string mail = Session["Mail"].ToString();
-            string updatesql = "UPDATE RegisterTable SET Password = '" + newPassword + "' WHERE Mail = '" + mail + "'";
-
+            string oldPassword = Request.Form["oldPasswordId"];
+            string updatesql = "UPDATE RegisterTable SET Password = '" + newPassword + "' WHERE Mail = '" + Session["mail"] + "'";
+            string loginsql = "SELECT * FROM RegisterTable WHERE Mail = '" + Session["Mail"] + "' AND Password = '" + oldPassword + "'";
             if (IsPostBack)
             {
-                if (!string.IsNullOrEmpty(newPassword))
+                if (!string.IsNullOrEmpty(newPassword) && !string.IsNullOrEmpty(oldPassword))
                 {
-                    int rows = Helper.ExecuteNonQuery(fileName, updatesql);
-                    
-                    Session.Abandon();
-                    Response.Redirect("Login.aspx");
+                    if (Helper.IsExist(fileName, loginsql))
+                    {
+                        int rows = Helper.ExecuteNonQuery(fileName, updatesql);
+
+                        Session.Abandon();
+                        Response.Redirect("Login.aspx");
+                    }
+                    else
+                    {
+                        ClientScript.RegisterStartupScript(
+                        this.GetType(),
+                        "alert",
+                        "alert('The password is incorect please try again');",
+                        true
+                     );
+                    }
+
+
 
                 }
                 else
@@ -33,10 +47,11 @@ namespace htmlschoolproject.appPages.aspxPages
                     ClientScript.RegisterStartupScript(
                     this.GetType(),
                     "alert",
-                    "alert('Please fill in both email and password fields.');",
+                    "alert('Please fill both fields and try again');",
                     true
                  );
                 }
+
             }
         }
         protected void changeBtn_Click(object sender, EventArgs e)

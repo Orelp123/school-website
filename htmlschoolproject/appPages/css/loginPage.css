@@ -1,154 +1,152 @@
-﻿
+﻿html, body {
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    background-color: #E9C887;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===== TOP LOGO ===== */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
 
 #logo {
-    transform: translate(-50%, -50%);
-    margin-top: 150px;
-    position: absolute;
-    left: 50%;
-    padding: 0;
-    margin-bottom: -170px;
-    width: 20vw;
-    height: 30vh;
+    width: 230px;
+    height: auto;
 }
+
+/* ===== MAIN CARD ===== */
 .mainDiv {
-    transform: translate(-50%, -50%);
+    width: 820px;
+    max-width: 92vw;
+    min-height: 420px;
+    margin: 30px auto 0 auto;
     background-color: #FFF0DC;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 56vw;
-    height: 60vh;
-    border-radius: 8px;
+    border-radius: 18px;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    box-sizing: border-box;
 }
 
-#emailId {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 12em;
-    height: 1.4em;
-    left: 70%;
-    top: 33%;
-    font-size: 30px;
-    border-radius: 9px;
-    background-color: #DEAA79;
-    border: none;
-    outline: none;
-    text-align: center;
-    margin-left: 60px;
+/* ===== LEFT IMAGE ===== */
+#soloLogo {
+    height: 300px;
+    width: auto;
+    justify-self: center;
 }
 
+/* ===== FORM AREA ===== */
+.formArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+/* FIELD STACK */
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+    .field h2 {
+        margin: 0;
+        font-family: Cursive;
+        letter-spacing: 2px;
+        color: #543A14;
+        font-size: 1.25rem;
+    }
+
+/* INPUTS */
+#emailId,
 #passwordId {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 12em;
-    height: 1.4em;
-    left: 70%;
-    top: 60%;
-    font-size: 30px;
-    border-radius: 9px;
+    width: 320px;
+    height: 46px;
+    border-radius: 12px;
     background-color: #DEAA79;
     border: none;
     outline: none;
     text-align: center;
-    margin-left: 60px;
+    font-size: 1.05rem;
 }
 
-#passH2 {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 76.3%;
-    top: 44%;
-    font-family: Cursive;
-    letter-spacing: 2px;
-    color: #543A14;
-    font-size: 2rem;
-    padding-bottom: 15px;
-    color: #543A14;
-}
-#emailH2 {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 76.3%;
-    top: 17%;
-    font-family: Cursive;
-    letter-spacing: 2px;
-    color: #543A14;
-    font-size: 2rem;
-    padding-bottom: 15px;
-    color: #543A14;
-}
+    #emailId::placeholder,
+    #passwordId::placeholder {
+        color: #49434340;
+    }
 
+    #emailId:focus,
+    #passwordId:focus {
+        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+        transition: 0.2s;
+    }
 
+/* ===== LOGIN BUTTON ===== */
 #loginBtn {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 5em;
-    height: 2em;
-    left: 50%;
-    top: 77%;
-    text-align: center;
-    font-size: 30px;
+    margin-top: 10px;
+    width: 160px;
+    height: 48px;
+    font-size: 1.6rem;
     background-color: #DEAA79;
-    outline: none;
     border: none;
+    border-radius: 12px;
     font-family: Cursive;
-    border-radius:10px;
     cursor: pointer;
 }
 
+    #loginBtn:hover {
+        box-shadow: 0 0 8px rgba(0,0,0,0.25);
+    }
 
+/* ===== TEXT BELOW (FIXED SPACING) ===== */
 #myP {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 50%;
-    top: 83%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 6px;
+    margin-bottom: 2px;
+    font-size: 0.95rem;
     color: #543A14;
+    text-align: center;
 }
 
 #acountAsk {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 50%;
-    top: 85%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #543A14;
-}
-
-#soloLogo {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 23%;
-    top: 50%;
-    width: 30vw;
-    height: 55vh;
-}
-#emailId::placeholder {
-    font-size: 30px;
+    margin-top: 0;
+    font-size: 0.95rem;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #49434340;
+    
 }
 
-#passwordId::placeholder {
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #49434340;
-}
+    #acountAsk a {
+        color: #0082ff;
+        text-decoration: underline;
+        
+    }
 
-#passwordId:focus {
-    transition: 0.5s;
-    box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
-}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .mainDiv {
+        grid-template-columns: 1fr;
+        padding: 22px;
+        margin-top: 40px;
+    }
 
-#emailId:focus {
-    transition: 0.5s;
-    box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
-}
+    #soloLogo {
+        height: 240px;
+    }
 
-#loginBtn:hover {
-    transition: 0.5s;
-    box-shadow: 0 0 10px rgba(0,0, 0, 0.75);
+    #emailId,
+    #passwordId {
+        width: 90%;
+    }
 }
