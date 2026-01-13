@@ -28,18 +28,16 @@
                     <i class="fa fa-fw fa-user"></i> UserList
                 </a>
 
-                <a href="DeleteUser.aspx">
-                    <i class="fa fa-fw fa-user"></i> Delete User
-                </a>
+               
             </asp:PlaceHolder>
             <asp:PlaceHolder ID="logedUserOnly" runat="server" Visible="false">
 
                 <a href="UpdateUserChange.aspx">
                     <i class="fa fa-fw fa-user"></i> Update User
                 </a>
-                <a href="RecoverPassword.aspx">
+               <%-- <a href="RecoverPassword.aspx">
                      <i class="fa fa-fw fa-user"></i> Recover Password
-                </a>
+                </a>--%>
                         
                         <asp:LinkButton 
                             ID="btnLogout" 
