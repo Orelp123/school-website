@@ -16,7 +16,14 @@ namespace htmlschoolproject.appPages.aspxPages
             
             if (Session["admin"] == null || Session["admin"].ToString() != "1")
             {
-                Response.Redirect("Login.aspx");
+                ClientScript.RegisterStartupScript(
+                       this.GetType(),
+                       "alert",
+                       "alert('You are not connected as an admin');",
+                       true
+                    );
+
+                
                 return;
             }
 

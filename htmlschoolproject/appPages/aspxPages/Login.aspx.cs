@@ -38,18 +38,22 @@ namespace htmlschoolproject.appPages.aspxPages
                             Session["Mail"] = table.Rows[0]["Mail"].ToString();
                             Session["Name"] = table.Rows[0]["Name"].ToString();
                             Session["admin"] = table.Rows[0]["IsAdmin"].ToString();
+                            
                             if (Session["admin"].ToString()=="1") 
                             {
                                 msg = "welcome admin " + Session["Name"].ToString();
                                 Session["userName"] = Session["Name"].ToString();
-                                Response.Redirect("WelcomePage.aspx");
-                                
+                               
+
+
+                                // Response.Redirect("WelcomePage.aspx");
+
                             }
                             else
                             {
                                 msg = "welcome " + Session["Name"].ToString();
                                 Session["userName"] = Session["Name"].ToString();
-                                Response.Redirect("WelcomePage.aspx");
+                                //Response.Redirect("WelcomePage.aspx");
                             }
 
                         }

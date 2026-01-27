@@ -1,17 +1,18 @@
-﻿using htmlschoolproject.Helpers;
+﻿using htmlschoolproject.appPages.aspxPages;
+using htmlschoolproject.Helpers;
 using System;
+using System.Data;
+using System.Web.Services.Description;
 using System.Web.UI;
 
 namespace htmlschoolproject
 {
     public partial class Registar : System.Web.UI.Page
     {
+        public string msg = "";
         private readonly string fileName = general.FileName;
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            // no IsPostBack needed when using button click events
-        }
+        
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -19,14 +20,27 @@ namespace htmlschoolproject
 
             if (success > 0)
             {
-                // Optional: store session info if you want
-                // Session["Mail"] = txtEmail.Text.Trim();
+               
+                string userName = txtName.Text.Trim();
 
-                Response.Redirect("WelcomePage.aspx");
+
+
+                ClientScript.RegisterStartupScript(
+                    this.GetType(),
+                         "alert",
+                         $"alert('welcome {userName}');",
+                         true
+                );
+                
             }
             else
             {
-                lblMessage.Text = "Register failed";
+                ClientScript.RegisterStartupScript(
+                   this.GetType(),
+                        "alert",
+                        $"alert('Register Failed');",
+                        true
+               );
             }
         }
 
@@ -51,9 +65,7 @@ namespace htmlschoolproject
 
             if (mail != "" && password != "" && fname != "")
             {
-                string sql =
-                    "INSERT INTO RegisterTable (Name,Mail,Password,IsAdmin) " +
-                    "VALUES('" + fname + "','" + mail + "','" + password + "','" + isAdmin + "')";
+                string sql = "INSERT INTO RegisterTable (Name, Mail, Password, IsAdmin) VALUES ('" + fname + "','" + mail + "','" + password + "','" + isAdmin + "')";
 
                 Helper.DoQuery(fileName, sql);
                 success = 1;
@@ -61,12 +73,12 @@ namespace htmlschoolproject
             }
             else
             {
-                ClientScript.RegisterStartupScript(
-                    this.GetType(),
-                    "alert",
-                    "alert('Please fill in email, password and name.');",
-                    true
-                );
+                //ClientScript.RegisterStartupScript(
+                //    this.GetType(),
+                //    "alert",
+                //    "alert('Please fill in email, password and name.');",
+                //    true
+                //);
             }
 
             return success;

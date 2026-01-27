@@ -11,12 +11,13 @@
 
     
     <div class="logo">
+        <%= msg %>
         <img src="../images/NewLogoColor.png" id="logo" alt="Logo" />
     </div>
 
     <div class="messageArea">
         <asp:Literal ID="MessageLiteral" runat="server" />
-        <%= msg %>
+        
     </div>
 
     <div class="mainDiv">
