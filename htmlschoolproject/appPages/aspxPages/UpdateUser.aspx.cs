@@ -21,7 +21,7 @@ namespace htmlschoolproject.appPages.aspxPages
             string loginsql = "SELECT * FROM RegisterTable WHERE Mail = '" + mail + "' AND Password = '" + password + "'" ;
             if (this.IsPostBack)
             {
-                if (password != "" && mail != "" || password != null && mail != password)
+                if (ValidateInput.ValidLength(password,20) && (ValidateInput.ValidLength(mail, 70))
                 {
                     Response.Write("mail=" + mail + " pass=" + password);
                     if (Helper.IsExist(fileName, loginsql))

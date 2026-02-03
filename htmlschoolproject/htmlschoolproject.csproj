@@ -160,6 +160,7 @@
     <Compile Include="appPages\aspxPages\Registar.aspx.designer.cs">
       <DependentUpon>Registar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ValidateInput.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
