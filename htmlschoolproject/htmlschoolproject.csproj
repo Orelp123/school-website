@@ -67,27 +67,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="appPages\aspxPages\DeleteUser.aspx" />
+    <Content Include="appPages\aspxPages\ContectUsPage.aspx" />
     <Content Include="appPages\aspxPages\Login.aspx" />
     <Content Include="appPages\aspxPages\loginPage.js" />
-    <Content Include="appPages\aspxPages\RecoverPassword.aspx" />
+    <Content Include="appPages\aspxPages\Recipes\Recipe1Pancake.aspx" />
+    <Content Include="appPages\aspxPages\Recipes\Recipe2Soup.aspx" />
+    <Content Include="appPages\aspxPages\Recipes\Recipe3Pizza.aspx" />
+    <Content Include="appPages\aspxPages\Recipes\Recipe4Bread.aspx" />
+    <Content Include="appPages\aspxPages\Recipes\Recipe5Cake.aspx" />
+    <Content Include="appPages\aspxPages\Recipes\Recipe6Cookies.aspx" />
     <Content Include="appPages\aspxPages\UpdateUserChange.aspx" />
-    <Content Include="appPages\aspxPages\UpdateUser.aspx" />
     <Content Include="appPages\aspxPages\UserList.aspx" />
     <Content Include="appPages\aspxPages\WelcomePage.aspx" />
-    <Content Include="appPages\css\masterCss.css" />
+    <Content Include="appPages\css\ContactUs.css" />
+    <Content Include="appPages\css\MasterCssTest.css" />
+    <Content Include="appPages\css\RecipesCss.css" />
+    <Content Include="appPages\css\RecipeMasterCss.css" />
     <Content Include="appPages\css\Register.css" />
     <Content Include="appPages\css\UpdateUser.css" />
     <Content Include="appPages\css\UserListCss.css" />
     <Content Include="appPages\css\welcomePage.css" />
     <Content Include="appPages\images\breadImg.jpg" />
+    <Content Include="appPages\images\breadMan-removebg-preview.png" />
     <Content Include="appPages\images\BreadManLogoSingle.png" />
     <Content Include="appPages\images\cakesImg.jpg" />
+    <Content Include="appPages\images\cookieMan-removebg-preview.png" />
     <Content Include="appPages\images\cookiesImg.jpg" />
+    <Content Include="appPages\images\Gemini_Generated_Image_wly48wly48wly48w-removebg-preview.png" />
     <Content Include="appPages\images\NewLogoColor.png" />
+    <Content Include="appPages\images\PanCakeMainImg.jpg" />
+    <Content Include="appPages\images\PanCakeMan-removebg-preview.png" />
     <Content Include="appPages\images\pizza.jpg" />
+    <Content Include="appPages\images\pizzaMan-removebg-preview.png" />
     <Content Include="appPages\images\saled.jpg" />
     <Content Include="appPages\images\sideGrid.jpg" />
+    <Content Include="appPages\images\soupMan-removebg-preview.png" />
     <Content Include="appPages\images\soupsNew.jpg" />
     <Content Include="appPages\images\test.png" />
     <Content Include="appPages\images\test2.png" />
@@ -97,14 +111,15 @@
     <Content Include="appPages\aspxPages\Registar.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="appPages\aspxPages\DeleteUser.aspx.cs">
-      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    <Compile Include="appPages\aspxPages\ContectUsPage.aspx.cs">
+      <DependentUpon>ContectUsPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="appPages\aspxPages\DeleteUser.aspx.designer.cs">
-      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    <Compile Include="appPages\aspxPages\ContectUsPage.aspx.designer.cs">
+      <DependentUpon>ContectUsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="appPages\aspxPages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -113,12 +128,47 @@
     <Compile Include="appPages\aspxPages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="appPages\aspxPages\RecoverPassword.aspx.cs">
-      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe1Pancake.aspx.cs">
+      <DependentUpon>Recipe1Pancake.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="appPages\aspxPages\RecoverPassword.aspx.designer.cs">
-      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe1Pancake.aspx.designer.cs">
+      <DependentUpon>Recipe1Pancake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe2Soup.aspx.cs">
+      <DependentUpon>Recipe2Soup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe2Soup.aspx.designer.cs">
+      <DependentUpon>Recipe2Soup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe3Pizza.aspx.cs">
+      <DependentUpon>Recipe3Pizza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe3Pizza.aspx.designer.cs">
+      <DependentUpon>Recipe3Pizza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe4Bread.aspx.cs">
+      <DependentUpon>Recipe4Bread.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe4Bread.aspx.designer.cs">
+      <DependentUpon>Recipe4Bread.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe5Cake.aspx.cs">
+      <DependentUpon>Recipe5Cake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe5Cake.aspx.designer.cs">
+      <DependentUpon>Recipe5Cake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe6Cookies.aspx.cs">
+      <DependentUpon>Recipe6Cookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appPages\aspxPages\Recipes\Recipe6Cookies.aspx.designer.cs">
+      <DependentUpon>Recipe6Cookies.aspx</DependentUpon>
     </Compile>
     <Compile Include="appPages\aspxPages\UpdateUserChange.aspx.cs">
       <DependentUpon>UpdateUserChange.aspx</DependentUpon>
@@ -126,13 +176,6 @@
     </Compile>
     <Compile Include="appPages\aspxPages\UpdateUserChange.aspx.designer.cs">
       <DependentUpon>UpdateUserChange.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="appPages\aspxPages\UpdateUser.aspx.cs">
-      <DependentUpon>UpdateUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="appPages\aspxPages\UpdateUser.aspx.designer.cs">
-      <DependentUpon>UpdateUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="appPages\aspxPages\UserList.aspx.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
@@ -160,12 +203,20 @@
     <Compile Include="appPages\aspxPages\Registar.aspx.designer.cs">
       <DependentUpon>Registar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ValidateInput.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Content Include="appPages\css\loginPage.css" />
     <Compile Include="Properties\AssemblyInfo.cs" />

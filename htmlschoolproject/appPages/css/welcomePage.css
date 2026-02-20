@@ -92,7 +92,14 @@ body {
     color: #131010;
     font-size: 22px; /* BIGGER */
 }
-
+#H3Num3{
+    margin: 22px 0 14px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #131010;
+    font-size: 22px;
+   
+}
 /* ===== GALLERY GRID ===== */
 .galleryGrid {
     max-width: 1050px; /* BIGGER */
@@ -193,3 +200,13 @@ body {
         height: 180px;
     }
 }
+.titles {
+    margin: 22px 0 14px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #131010;
+    font-size: 22px;
+    background-color: #ffffff;
+}
+
+

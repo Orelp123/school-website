@@ -1,0 +1,172 @@
+﻿/* --- 1. Layout Container --- */
+.uc-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 2. Stove Burner & Flames Animation --- */
+.kitchen-heat-container {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Flames sit on the burner */
+}
+
+.burner {
+    width: 100px;
+    height: 20px;
+    background: #333;
+    border-radius: 50% / 100% 100% 0 0; /* Semi-circle burner look */
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Flame Wrapper */
+.flame-wrap {
+    position: absolute;
+    bottom: 35px; /* Sits right on top of burner */
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    z-index: 1;
+}
+
+/* Individual Flame Style */
+.flame {
+    width: 12px;
+    height: 20px;
+    background: linear-gradient(to top, #FF4500, #FFD700); /* Red to Yellow */
+    border-radius: 50% 50% 20% 20%;
+    filter: blur(1px);
+    animation: flicker 0.5s infinite alternate ease-in-out;
+    box-shadow: 0 0 12px #FF4500;
+}
+
+    /* Varying the flame heights for realism */
+    .flame:nth-child(1) {
+        height: 25px;
+        animation-delay: 0.1s;
+    }
+
+    .flame:nth-child(2) {
+        height: 40px;
+        animation-delay: 0.3s;
+        width: 15px;
+    }
+
+    .flame:nth-child(3) {
+        height: 55px;
+        animation-delay: 0.2s;
+        width: 18px;
+    }
+    /* Center flame */
+    .flame:nth-child(4) {
+        height: 38px;
+        animation-delay: 0.4s;
+        width: 15px;
+    }
+
+    .flame:nth-child(5) {
+        height: 22px;
+        animation-delay: 0.15s;
+    }
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(1) rotate(-2deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scaleY(1.3) rotate(2deg);
+        opacity: 1;
+        filter: blur(2px);
+    }
+}
+
+/* --- 3. Text Styles --- */
+.uc-text {
+    color: #543A14;
+    font-size: 2.2rem;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+}
+
+.uc-subtext {
+    color: #8B5E32;
+}
+.button-container {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #FFF0DC;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #543A14;
+    transition: all 0.3s ease;
+}
+
+    .back-link:hover {
+        background-color: #FFF0DC;
+        color: #543A14;
+        box-shadow: 0 4px 12px rgba(84, 58, 20, 0.3);
+        transform: translateY(-2px);
+    }
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between arrow and text */
+    color: #543A14;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease; /* This makes the animation smooth */
+    position: relative;
+}
+
+    .back-link i {
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover State */
+    .back-link:hover {
+        color: #8B5E34; /* Changes to a slightly lighter brown */
+        text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    }
+
+        .back-link:hover i {
+            transform: translateX(-5px); /* Moves the arrow slightly to the left */
+        }
+
+    /* Optional: Underline animation */
+    .back-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #8B5E34;
+        transition: width 0.3s ease;
+    }
+
+    .back-link:hover::after {
+        width: 100%;
+    }
+
+

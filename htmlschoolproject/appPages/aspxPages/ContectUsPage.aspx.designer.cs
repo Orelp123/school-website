@@ -11,7 +11,7 @@ namespace htmlschoolproject.appPages.aspxPages
 {
 
 
-    public partial class UpdateUser
+    public partial class ContectUsPage
     {
     }
 }

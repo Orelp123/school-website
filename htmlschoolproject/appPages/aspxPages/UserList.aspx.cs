@@ -13,14 +13,21 @@ namespace htmlschoolproject.appPages.aspxPages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (Session["admin"] == null || Session["admin"].ToString() != "1")
             {
-                Response.Redirect("Login.aspx");
+                ClientScript.RegisterStartupScript(
+                       this.GetType(),
+                       "alert",
+                       "alert('You are not connected as an admin');",
+                       true
+                    );
+
+
                 return;
             }
 
-            
+
             if (!string.IsNullOrEmpty(Request.Form["deleteMail"]))
             {
                 DelUser();

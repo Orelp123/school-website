@@ -11,8 +11,10 @@ namespace htmlschoolproject.appPages.aspxPages
 {
     public partial class UpdateUserChange : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             string fileName = general.FileName;
             string newPassword = Request.Form["newPasswordId"];
             string oldPassword = Request.Form["oldPasswordId"];
@@ -20,6 +22,20 @@ namespace htmlschoolproject.appPages.aspxPages
             string loginsql = "SELECT * FROM RegisterTable WHERE Mail = '" + Session["Mail"] + "' AND Password = '" + oldPassword + "'";
             if (IsPostBack)
             {
+
+                if (Session["userName"] == null || Session["userName"].ToString() != "visitor")
+                {
+                    ClientScript.RegisterStartupScript(
+                           this.GetType(),
+                           "alert",
+                           "alert('You are not logged in');",
+                           true
+                        );
+
+
+                    return;
+                }
+
                 if (!string.IsNullOrEmpty(newPassword) && !string.IsNullOrEmpty(oldPassword))
                 {
                     if (Helper.IsExist(fileName, loginsql))
@@ -51,9 +67,11 @@ namespace htmlschoolproject.appPages.aspxPages
                     true
                  );
                 }
-
             }
+                
+
         }
+        
         protected void changeBtn_Click(object sender, EventArgs e)
         {
             string newPassword = Request.Form["newPasswordId"];

@@ -10,13 +10,37 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     
+     <% if (!string.IsNullOrEmpty(msg)) { %>
+    <div id="loginMessage" class="login-msg">
+        <%= msg %>
+    </div>
+
+    <script type="text/javascript">
+        
+        setTimeout(function () {
+            var msgDiv = document.getElementById('loginMessage');
+            if (msgDiv) {
+                msgDiv.style.opacity = '0';
+                msgDiv.style.transform = 'translateY(-10px)';
+                msgDiv.style.transition = 'all 0.6s ease';
+                
+                
+                setTimeout(function () {
+                    msgDiv.style.display = 'none';
+                }, 600);
+            }
+        }, 3000); 
+    </script>
+<% } %>
+    
     <div class="logo">
+       
         <img src="../images/NewLogoColor.png" id="logo" alt="Logo" />
     </div>
 
     <div class="messageArea">
         <asp:Literal ID="MessageLiteral" runat="server" />
-        <%= msg %>
+        
     </div>
 
     <div class="mainDiv">

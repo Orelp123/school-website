@@ -11,6 +11,19 @@ namespace htmlschoolproject.appPages.aspxPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
+            bool isLoggedIn = Session["userName"] != null &&
+                     Session["userName"].ToString() != "visitor";
+
+            
+            if (isLoggedIn)
+            {
+                logedUserOnlyG.Visible = true;
+                logedUserOnlyG2.Visible = false;
+            }
+           
+            
 
 
         }

@@ -3,59 +3,48 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <title></title>
+    <title>Recipe Hub</title>
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
-    <link rel="stylesheet" href="appPages/css/masterCss.css" />
+   <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/appPages/css/MasterCssTest.css?v=1") %>" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
-    
     <form id="form1" runat="server">
 
         <div class="bar">
-<%--            <div class="search">
-                <span class="search-icon material-symbols-outlined">search</span>
-                <input class="search-input" type="search" placeholder="Search...">
-            </div>--%>
+    <a href="<%= ResolveUrl("~/appPages/aspxPages/WelcomePage.aspx") %>">
+        <i class="fa fa-fw fa-home" id="homeBar"></i> Home
+    </a>
 
-            <a href="WelcomePage.aspx"><i class="fa fa-fw fa-home" id="homeBar"></i> Home</a>
-            <a><i class="fa fa-fw fa-envelope" id="contactBar"></i> Contact</a>
-            <a href="Login.aspx"><i class="fa fa-fw fa-user" id="loginBar"></i> Login/Register</a>
+    <a href="<%= ResolveUrl("~/appPages/aspxPages/ContectUsPage.aspx") %>">
+        <i class="fa fa-fw fa-envelope" id="contactBar"></i> Contact
+    </a>
 
-            <asp:PlaceHolder ID="adminOnly" runat="server" Visible="false">
-                <a href="UserList.aspx">
-                    <i class="fa fa-fw fa-user"></i> UserList
-                </a>
+    <a href="<%= ResolveUrl("~/appPages/aspxPages/Login.aspx") %>">
+        <i class="fa fa-fw fa-user" id="loginBar"></i> Login/Register
+    </a>
 
-               
-            </asp:PlaceHolder>
-            <asp:PlaceHolder ID="logedUserOnly" runat="server" Visible="false">
+    <asp:PlaceHolder ID="adminOnly" runat="server" Visible="false">
+        <a href="<%= ResolveUrl("~/appPages/aspxPages/UserList.aspx") %>">
+            <i class="fa fa-fw fa-user"></i> UserList
+        </a>
+    </asp:PlaceHolder>
 
-                <a href="UpdateUserChange.aspx">
-                    <i class="fa fa-fw fa-user"></i> Update User
-                </a>
-               <%-- <a href="RecoverPassword.aspx">
-                     <i class="fa fa-fw fa-user"></i> Recover Password
-                </a>--%>
-                        
-                        <asp:LinkButton 
-                            ID="btnLogout" 
-                            runat="server" 
-                            OnClick="btnLogout_Click" 
-                            CssClass="logout-btn">
-                            Logout
-                        </asp:LinkButton>
-              
-            </asp:PlaceHolder>
+    <asp:PlaceHolder ID="logedUserOnly" runat="server" Visible="false">
+        <a href="<%= ResolveUrl("~/appPages/aspxPages/UpdateUserChange.aspx") %>">
+            <i class="fa fa-fw fa-user"></i> Update User
+        </a>
 
-           
-           
-        </div>
+        <asp:LinkButton 
+            ID="btnLogout" 
+            runat="server" 
+            OnClick="btnLogout_Click" 
+            CssClass="logout-btn">
+            <i class="fa fa-fw fa-sign-out"></i> Logout
+        </asp:LinkButton>
+    </asp:PlaceHolder>
+</div>
         
-
-        
-   
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
 
     </form>

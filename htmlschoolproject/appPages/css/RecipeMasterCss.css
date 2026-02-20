@@ -1,0 +1,62 @@
+﻿body {
+    font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+    background-color: #F0BB78;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav Bar Styling - Clean & Centered *
+
+/* Master Wrapper to keep Recipe Card Centered Under Nav */
+.recipe-master-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 40px 10px;
+    min-height: 85vh;
+}
+
+/* The Recipe Card (mainDiv) */
+.mainDiv {
+    width: 820px;
+    max-width: 95vw;
+    background-color: #FFF0DC; /* Pretty Cream Card */
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Image left, text right */
+    gap: 30px;
+    box-shadow: 0 15px 40px rgba(84, 58, 20, 0.2);
+}
+
+/* Image Style */
+.recipe-image {
+    width: 100%;
+    max-width: 300px;
+    filter: drop-shadow(0 10px 15px rgba(84, 58, 20, 0.3));
+}
+
+.recipe-title {
+    font-size: 2.2em;
+    color: #543A14;
+    border-bottom: 3px solid #543A14;
+    margin-bottom: 20px;
+}
+
+/* Table Style */
+.ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .ingredients-table th {
+        background-color: #543A14;
+        color: #FFF0DC;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .ingredients-table td {
+        padding: 10px;
+        border-bottom: 1px solid rgba(84, 58, 20, 0.1);
+    }

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace htmlschoolproject.appPages.aspxPages
+namespace htmlschoolproject
 {
 
 
-    public partial class RecoverPassword
+    public partial class WebForm1
     {
     }
 }

@@ -9,13 +9,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     
+    
     <div class="logo">
         <img src="../images/NewLogoColor.png" id="logo" alt="Logo" />
     </div>
 
     
     <div class="mainDiv">
-
+        
+       
         <img src="../images/BreadManLogoSingle.png" id="soloLogo" alt="Bread Man" />
 
         <div class="formArea">

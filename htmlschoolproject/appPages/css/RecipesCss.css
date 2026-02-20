@@ -1,0 +1,172 @@
+﻿/* 1. Reset and Body Setup */
+body {
+    background-color: #FFF0DC;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #543A14;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Centering Container */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    min-height: 80vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+/* 3. The Main Recipe Card */
+.mainDiv {
+    width: 820px;
+    max-width: 92vw;
+    background-color: #FFF0DC;
+    border-radius: 18px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    box-shadow: 0 20px 50px rgba(84, 58, 20, 0.2);
+    box-sizing: border-box;
+    border: 1px solid rgba(84, 58, 20, 0.05);
+}
+
+/* 4. Typography & Titles */
+.recipe-title, .section-title {
+    color: #543A14;
+    margin-top: 0;
+}
+
+.recipe-title {
+    font-size: 2.2em;
+    border-bottom: 3px solid #543A14;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* 5. The Pancake Man Image */
+.recipe-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border: none;
+    filter: drop-shadow(0 10px 15px rgba(84, 58, 20, 0.3));
+    margin-bottom: 15px;
+}
+
+.recipe-image-wrapper {
+    text-align: center;
+}
+
+/* 6. About Section */
+.about-section p {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #543A14;
+}
+
+/* 7. Ingredients Table */
+.ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .ingredients-table th {
+        background-color: #543A14;
+        color: #FFF0DC;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .ingredients-table td {
+        padding: 10px;
+        border-bottom: 1px solid rgba(84, 58, 20, 0.2);
+        color: #543A14;
+    }
+
+/* 8. Instructions List */
+.instructions-list {
+    padding-left: 20px;
+    margin: 0;
+}
+
+    .instructions-list li {
+        padding: 5px 0;
+        line-height: 1.5;
+        color: #543A14;
+    }
+
+/* 9. Back Button Styling */
+.button-container {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 12px 24px;
+    
+    color: #FFF0DC;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #543A14;
+    transition: all 0.3s ease;
+}
+
+    .back-link:hover {
+        background-color: #FFF0DC;
+        color: #543A14;
+        box-shadow: 0 4px 12px rgba(84, 58, 20, 0.3);
+        transform: translateY(-2px);
+    }
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between arrow and text */
+    color: #543A14;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease; /* This makes the animation smooth */
+    position: relative;
+}
+
+    .back-link i {
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover State */
+    .back-link:hover {
+        color: #8B5E34; /* Changes to a slightly lighter brown */
+        text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    }
+
+        .back-link:hover i {
+            transform: translateX(-5px); /* Moves the arrow slightly to the left */
+        }
+
+    /* Optional: Underline animation */
+    .back-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #8B5E34;
+        transition: width 0.3s ease;
+    }
+
+    .back-link:hover::after {
+        width: 100%;
+    }

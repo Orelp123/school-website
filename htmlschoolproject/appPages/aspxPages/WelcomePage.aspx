@@ -40,51 +40,64 @@
 
         </div>
 
-        <h3 id="H3Num2">Here are some of our simple recipes</h3>
+        
+            <h3 id="H3Num2">Here are some of our simple recipes</h3>
+            <asp:PlaceHolder ID="logedUserOnlyG2" runat="server" Visible="true"  >
+            <h3 style=" margin: 15px 0 14px 0;
+                     text-align: center;
+                     letter-spacing: 2px;
+                     color: #131010;
+                     font-size: 22px;
+                    " id="H3Num3">To see more log in</h3> 
+            </asp:PlaceHolder>
+        
 
         <div class="galleryGrid">
 
             <div class="gallery">
-                <a id="saladImg" href="#" onclick="return false;">
-                    <img src="../images/saled.jpg" alt="Salad" />
+                <a id="PanCakeImg" href="Recipes/Recipe1Pancake.aspx">
+                    <img src="../images/PanCakeMainImg.jpg" alt="Pancake" />
                 </a>
-                <div class="discriptin">Salad</div>
+                <div class="discriptin">PanCake</div>
             </div>
 
             <div class="gallery">
-                <a id="soupImg" href="#" onclick="return false;">
+                <a id="soupImg" href="Recipes/Recipe2Soup.aspx" >
                     <img src="../images/soupsNew.jpg" alt="Soup" />
                 </a>
                 <div class="discriptin">Soup</div>
             </div>
 
-            <div class="gallery">
-                <a id="pizzaImg" href="#" onclick="return false;">
-                    <img src="../images/pizza.jpg" alt="Pizza" />
-                </a>
-                <div class="discriptin">Pizza</div>
-            </div>
+            <asp:PlaceHolder ID="logedUserOnlyG" runat="server" Visible="false">
 
-            <div class="gallery">
-                <a id="BreadImg" href="#" onclick="return false;">
-                    <img src="../images/breadImg.jpg" alt="Bread" />
-                </a>
-                <div class="discriptin">Bread</div>
-            </div>
+                <div class="gallery">
+                    <a id="pizzaImg" href="Recipes/Recipe3Pizza.aspx" >
+                        <img src="../images/pizza.jpg" alt="Pizza" />
+                    </a>
+                    <div class="discriptin">Pizza</div>
+                </div>
 
-            <div class="gallery">
-                <a id="cakesImg" href="#" onclick="return false;">
-                    <img src="../images/cakesImg.jpg" alt="Cakes" />
-                </a>
-                <div class="discriptin">Cakes</div>
-            </div>
+                <div class="gallery">
+                    <a id="BreadImg" href="Recipes/Recipe4Bread.aspx" >
+                        <img src="../images/breadImg.jpg" alt="Bread" />
+                    </a>
+                    <div class="discriptin">Bread</div>
+                </div>
 
-            <div class="gallery">
-                <a id="cookiesImg" href="#" onclick="return false;">
-                    <img src="../images/cookiesImg.jpg" alt="Cookies" />
-                </a>
-                <div class="discriptin">Cookies</div>
-            </div>
+                <div class="gallery">
+                    <a id="cakesImg" href="Recipes/Recipe5Cake.aspx">
+                        <img src="../images/cakesImg.jpg" alt="Cakes" />
+                    </a>
+                    <div class="discriptin">Cakes</div>
+                </div>
+
+                <div class="gallery">
+                    <a id="cookiesImg" href="Recipes/Recipe6Cookies.aspx" >
+                        <img src="../images/cookiesImg.jpg" alt="Cookies" />
+                    </a>
+                    <div class="discriptin">Cookies</div>
+                </div>
+                </asp:PlaceHolder>
 
         </div>
 
