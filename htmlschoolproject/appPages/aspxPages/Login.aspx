@@ -14,6 +14,7 @@
     <div id="loginMessage" class="login-msg">
         <%= msg %>
     </div>
+   
 
     <script type="text/javascript">
         
@@ -31,7 +32,7 @@
             }
         }, 3000); 
     </script>
-<% } %>
+       <% } %>
     
     <div class="logo">
        

@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== TOP LOGO ===== */
+
 .logo {
     width: 100%;
     display: flex;
@@ -22,15 +22,15 @@ body {
     height: auto;
 }
 
-/* ===== MAIN CARD ===== */
+
 .mainDiv {
-    width: 820px; /* LESS WIDE */
+    width: 820px; 
     max-width: 92vw;
-    height: 480px; /* TALLER */
-    margin: 18px auto 0 auto; /* CLOSE TO TOP */
+    height: 480px;
+    margin: 18px auto 0 auto; 
     background-color: #FFF0DC;
     border-radius: 16px;
-    padding: 26px; /* MORE VERTICAL SPACE */
+    padding: 26px; 
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;

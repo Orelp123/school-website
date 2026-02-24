@@ -65,18 +65,6 @@
         </div>
     </div>
 
-    <script>
-        function validateRegister() {
-            var email = document.getElementById('<%= txtEmail.ClientID %>').value.trim();
-            var pass = document.getElementById('<%= txtPassword.ClientID %>').value.trim();
-            var name = document.getElementById('<%= txtName.ClientID %>').value.trim();
-
-            if (email === "" || pass === "" || name === "") {
-                alert("Please fill in email, password and name.");
-                return false;
-            }
-            return true;
-        }
-    </script>
+    
 
 </asp:Content>

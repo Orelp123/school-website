@@ -6,8 +6,10 @@ function validateLogin()
 
         if (email === "" || password === "") {
             alert("Please fill in both email and password fields.");
-        return false; // prevent form submission
+        return false; 
       }
 
-    return true; // allow submission
+    return true;
 }
+
+

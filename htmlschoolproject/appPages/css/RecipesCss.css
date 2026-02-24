@@ -1,4 +1,4 @@
-﻿/* 1. Reset and Body Setup */
+﻿
 body {
     background-color: #FFF0DC;
     font-family: Arial, Helvetica, sans-serif;
@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* 2. Centering Container */
+
 .center-wrapper {
     display: flex;
     justify-content: center;
@@ -19,7 +19,6 @@ body {
     box-sizing: border-box;
 }
 
-/* 3. The Main Recipe Card */
 .mainDiv {
     width: 820px;
     max-width: 92vw;
@@ -35,7 +34,7 @@ body {
     border: 1px solid rgba(84, 58, 20, 0.05);
 }
 
-/* 4. Typography & Titles */
+
 .recipe-title, .section-title {
     color: #543A14;
     margin-top: 0;
@@ -53,7 +52,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* 5. The Pancake Man Image */
+
 .recipe-image {
     width: 100%;
     max-width: 280px;
@@ -67,14 +66,13 @@ body {
     text-align: center;
 }
 
-/* 6. About Section */
+
 .about-section p {
     line-height: 1.6;
     font-size: 1em;
     color: #543A14;
 }
 
-/* 7. Ingredients Table */
 .ingredients-table {
     width: 100%;
     border-collapse: collapse;
@@ -94,8 +92,7 @@ body {
         color: #543A14;
     }
 
-/* 8. Instructions List */
-.instructions-list {
+instructions-list {
     padding-left: 20px;
     margin: 0;
 }
@@ -106,7 +103,7 @@ body {
         color: #543A14;
     }
 
-/* 9. Back Button Styling */
+
 .button-container {
     margin-top: 30px;
     text-align: right;
@@ -133,11 +130,11 @@ body {
 .back-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Space between arrow and text */
+    gap: 8px; 
     color: #543A14;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.3s ease; /* This makes the animation smooth */
+    transition: all 0.3s ease; 
     position: relative;
 }
 
@@ -145,17 +142,17 @@ body {
         transition: transform 0.3s ease;
     }
 
-    /* Hover State */
+    
     .back-link:hover {
-        color: #8B5E34; /* Changes to a slightly lighter brown */
+        color: #8B5E34;
         text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
     }
 
         .back-link:hover i {
-            transform: translateX(-5px); /* Moves the arrow slightly to the left */
+            transform: translateX(-5px);
         }
 
-    /* Optional: Underline animation */
+    
     .back-link::after {
         content: '';
         position: absolute;

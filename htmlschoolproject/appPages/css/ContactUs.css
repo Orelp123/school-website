@@ -1,4 +1,4 @@
-﻿/* --- 1. Layout Container --- */
+﻿
 .uc-wrapper {
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* --- 2. Stove Burner & Flames Animation --- */
+
 .kitchen-heat-container {
     position: relative;
     width: 200px;
@@ -17,42 +17,42 @@
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Flames sit on the burner */
+    align-items: flex-end; 
 }
 
 .burner {
     width: 100px;
     height: 20px;
     background: #333;
-    border-radius: 50% / 100% 100% 0 0; /* Semi-circle burner look */
+    border-radius: 50% / 100% 100% 0 0; 
     position: absolute;
     bottom: 20px;
     z-index: 2;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-/* Flame Wrapper */
+
 .flame-wrap {
     position: absolute;
-    bottom: 35px; /* Sits right on top of burner */
+    bottom: 35px; 
     display: flex;
     align-items: flex-end;
     gap: 2px;
     z-index: 1;
 }
 
-/* Individual Flame Style */
+
 .flame {
     width: 12px;
     height: 20px;
-    background: linear-gradient(to top, #FF4500, #FFD700); /* Red to Yellow */
+    background: linear-gradient(to top, #FF4500, #FFD700);
     border-radius: 50% 50% 20% 20%;
     filter: blur(1px);
     animation: flicker 0.5s infinite alternate ease-in-out;
     box-shadow: 0 0 12px #FF4500;
 }
 
-    /* Varying the flame heights for realism */
+    
     .flame:nth-child(1) {
         height: 25px;
         animation-delay: 0.1s;
@@ -69,8 +69,7 @@
         animation-delay: 0.2s;
         width: 18px;
     }
-    /* Center flame */
-    .flame:nth-child(4) {
+        .flame:nth-child(4) {
         height: 38px;
         animation-delay: 0.4s;
         width: 15px;
@@ -94,7 +93,7 @@
     }
 }
 
-/* --- 3. Text Styles --- */
+
 .uc-text {
     color: #543A14;
     font-size: 2.2rem;
@@ -131,11 +130,11 @@
 .back-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Space between arrow and text */
+    gap: 8px; 
     color: #543A14;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.3s ease; /* This makes the animation smooth */
+    transition: all 0.3s ease; 
     position: relative;
 }
 
@@ -143,17 +142,17 @@
         transition: transform 0.3s ease;
     }
 
-    /* Hover State */
+    
     .back-link:hover {
-        color: #8B5E34; /* Changes to a slightly lighter brown */
+        color: #8B5E34; 
         text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
     }
 
         .back-link:hover i {
-            transform: translateX(-5px); /* Moves the arrow slightly to the left */
+            transform: translateX(-5px);
         }
 
-    /* Optional: Underline animation */
+    
     .back-link::after {
         content: '';
         position: absolute;

@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== TOP LOGO ===== */
+
 .logo {
     width: 100%;
     display: flex;
@@ -22,7 +22,6 @@ body {
     height: auto;
 }
 
-/* ===== MAIN CARD ===== */
 .mainDiv {
     width: 820px;
     max-width: 92vw;
@@ -39,14 +38,14 @@ body {
     box-sizing: border-box;
 }
 
-/* ===== LEFT IMAGE ===== */
+
 #soloLogo {
     height: 300px;
     width: auto;
     justify-self: center;
 }
 
-/* ===== FORM AREA ===== */
+
 .formArea {
     display: flex;
     flex-direction: column;
@@ -54,7 +53,7 @@ body {
     gap: 14px;
 }
 
-/* FIELD STACK */
+
 .field {
     display: flex;
     flex-direction: column;
@@ -70,7 +69,7 @@ body {
         font-size: 1.25rem;
     }
 
-/* INPUTS */
+
 #emailId,
 #passwordId {
     width: 320px;
@@ -94,7 +93,7 @@ body {
         transition: 0.2s;
     }
 
-/* ===== LOGIN BUTTON ===== */
+
 #loginBtn {
     margin-top: 10px;
     width: 160px;
@@ -111,7 +110,7 @@ body {
         box-shadow: 0 0 8px rgba(0,0,0,0.25);
     }
 
-/* ===== TEXT BELOW (FIXED SPACING) ===== */
+
 #myP {
     margin-top: 6px;
     margin-bottom: 2px;
@@ -133,7 +132,7 @@ body {
         
     }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 900px) {
     .mainDiv {
         grid-template-columns: 1fr;
@@ -161,11 +160,11 @@ body {
     font-weight: bold;
     border: 2px solid #D2B48C;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    /* Initial state for the fade-out logic */
+   
     opacity: 1;
     transform: translateY(0);
     transition: all 0.6s ease;
-    /* Pop-in effect on load */
+   
     animation: loginMsgPop 0.3s ease-out;
 }
 

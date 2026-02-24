@@ -35,10 +35,11 @@ namespace htmlschoolproject
             }
             else
             {
+                btnClear_Click(sender, e);
                 ClientScript.RegisterStartupScript(
                    this.GetType(),
                         "alert",
-                        $"alert('Register Failed');",
+                        $"alert('Register Failed Your name, password or email is invalid');",
                         true
                );
             }

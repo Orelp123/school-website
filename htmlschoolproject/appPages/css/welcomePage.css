@@ -9,12 +9,12 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== PAGE WRAPPER ===== */
+
 .welcomePage {
     width: 100%;
 }
 
-/* ===== TOP LOGO ===== */
+
 .logo {
     width: 100%;
     display: flex;
@@ -23,17 +23,17 @@ body {
 }
 
 #logo {
-    width: 240px; /* BIGGER */
+    width: 240px;
     height: auto;
 }
 
-/* ===== TOP SECTION ===== */
+
 .pageWrap {
     max-width: 1280px;
     width: 94%;
     margin: 8px auto 0 auto;
     display: grid;
-    grid-template-columns: 240px 1fr 240px; /* BIGGER side area */
+    grid-template-columns: 240px 1fr 240px;
     gap: 12px;
     align-items: start;
 }
@@ -45,13 +45,12 @@ body {
 
 .sideImg {
     width: 100%;
-    max-width: 240px; /* BIGGER side images */
+    max-width: 240px; 
     height: auto;
     border-radius: 18px;
     display: block;
 }
 
-/* ===== CENTER TEXT ===== */
 .centerContent {
     text-align: center;
 }
@@ -61,36 +60,35 @@ body {
     font-family: Fantasy;
     letter-spacing: 2px;
     color: #543A14;
-    font-size: 38px; /* BIGGER */
-}
+    font-size: 38px; }
 
 #myH3 {
     margin: 0 0 10px 0;
     font-family: Fantasy;
     letter-spacing: 2px;
     color: #131010;
-    font-size: 24px; /* BIGGER */
+    font-size: 24px; 
     text-decoration: underline;
 }
 
 #myP {
     color: #543A14;
     font-family: Perpetua;
-    font-size: 17px; /* BIGGER */
+    font-size: 17px; 
     line-height: 1.35;
-    max-width: 650px; /* BIGGER */
+    max-width: 650px;
     margin: 0 auto;
-    max-height: 300px; /* slightly taller */
+    max-height: 300px;
     overflow: hidden;
 }
 
-/* ===== TITLE ABOVE GALLERY ===== */
+
 #H3Num2 {
     margin: 22px 0 14px 0;
     text-align: center;
     letter-spacing: 2px;
     color: #131010;
-    font-size: 22px; /* BIGGER */
+    font-size: 22px; 
 }
 #H3Num3{
     margin: 22px 0 14px 0;
@@ -100,9 +98,9 @@ body {
     font-size: 22px;
    
 }
-/* ===== GALLERY GRID ===== */
+
 .galleryGrid {
-    max-width: 1050px; /* BIGGER */
+    max-width: 1050px;
     width: 94%;
     margin: 0 auto 34px auto;
     display: grid;
@@ -110,7 +108,7 @@ body {
     gap: 16px;
 }
 
-/* Cards */
+
 .gallery {
     background-color: #FFF0DC;
     border-radius: 14px;
@@ -127,7 +125,7 @@ body {
 
     .gallery img {
         width: 100%;
-        height: 135px; /* BIGGER images */
+        height: 135px;
         object-fit: cover;
         display: block;
     }
@@ -141,7 +139,7 @@ body {
         line-height: 1.1;
     }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 1100px) {
     .pageWrap {
         grid-template-columns: 200px 1fr 200px;

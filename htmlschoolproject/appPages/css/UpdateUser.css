@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== TOP LOGO ===== */
+
 .logo {
     width: 100%;
     display: flex;
@@ -22,7 +22,7 @@ body {
     height: auto;
 }
 
-/* ===== PAGE WRAPPER (NO SCROLL) ===== */
+
 .pageWrapper {
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ body {
    
 }
 
-/* ===== MAIN CARD ===== */
+
 .mainDiv {
     width: 820px;
     max-width: 92vw;
@@ -46,14 +46,13 @@ body {
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
-/* ===== LEFT IMAGE ===== */
-#soloLogo {
+soloLogo {
     height: 330px;
     width: auto;
     justify-self: center;
 }
 
-/* ===== FORM ===== */
+
 .formArea {
     display: flex;
     flex-direction: column;
@@ -75,7 +74,6 @@ body {
         font-size: 1.25rem;
     }
 
-/* ===== INPUTS ===== */
 #emailId,
 #oldPasswordId,
 #newPasswordId {
@@ -101,7 +99,7 @@ body {
         box-shadow: 0 0 8px rgba(0,0,0,0.25);
     }
 
-/* ===== BUTTON ===== */
+
 .actions {
     display: flex;
     justify-content: center;
@@ -123,7 +121,7 @@ body {
         box-shadow: 0 0 8px rgba(0,0,0,0.25);
     }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 900px) {
     .pageWrapper {
         height: auto;

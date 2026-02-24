@@ -5,9 +5,6 @@
     padding: 0;
 }
 
-/* Nav Bar Styling - Clean & Centered *
-
-/* Master Wrapper to keep Recipe Card Centered Under Nav */
 .recipe-master-wrapper {
     display: flex;
     justify-content: center;
@@ -16,20 +13,19 @@
     min-height: 85vh;
 }
 
-/* The Recipe Card (mainDiv) */
 .mainDiv {
     width: 820px;
     max-width: 95vw;
-    background-color: #FFF0DC; /* Pretty Cream Card */
+    background-color: #FFF0DC; 
     border-radius: 20px;
     padding: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Image left, text right */
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     box-shadow: 0 15px 40px rgba(84, 58, 20, 0.2);
 }
 
-/* Image Style */
+
 .recipe-image {
     width: 100%;
     max-width: 300px;
@@ -43,7 +39,7 @@
     margin-bottom: 20px;
 }
 
-/* Table Style */
+
 .ingredients-table {
     width: 100%;
     border-collapse: collapse;
