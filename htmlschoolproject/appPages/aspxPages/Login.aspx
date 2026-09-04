@@ -48,6 +48,8 @@
 
         <img src="../images/BreadManLogoSingle.png" id="soloLogo" alt="Bread Man" />
 
+        
+
         <div class="formArea">
 
             <div class="field">
